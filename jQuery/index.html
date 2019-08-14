@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Form Registration Page</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <script src="jquery.js" type="text/javascript"></script>
+      
+</head>
+
+<body>
+      <!--employee form -->
+<form name="myForm" action="#" onsubmit="event.preventDefault();return validate()" method="post">
+            <div class="wrapper">
+                  <div class="container">
+
+                        <!--heading of form-->
+                        <h1 id="h">Employee submision Form</h1>
+                        <!--form class-->
+                        <div class="form">
+
+                              <!--employeeId details-->
+                              <div><label>EmployeeId</label>
+                                    <input id="eid" type="text" name="emp" value="23##23" maxlength="10" disabled>
+                              </div>
+
+                              <!--full name of employee-->
+                              <div><label>Full name :</label>
+                                    <input id="Fname" onblur="fullName()" type="text" name="Fullname" placeholder="fullname" maxlength="25">
+                                   
+                              </div>
+
+                              <!--EmailId of employee-->
+                              <div><label>Email-Id :</label>
+                                    <input id="mail" onblur="emailvalidate()" type="email" name="mailaddress" placeholder="abc@gmail.com"
+                                          maxlength="30">
+                                    
+                              </div>
+
+                              <!--contact details-->
+                              <div> <label>Contact No. :</label>
+                                    <input id="cont" onblur="contactvalidate()" type="tel" name="contact" placeholder="" maxlength="10">
+                                   
+                              </div>
+
+                              <!--date of birth-->
+                              <div><label>Date of birth :</label>
+                                    <input id="Dob" onblur="dateofBvalidate()" type="date" name="DOB" placeholder="dd/mm/yyyy">
+                                    
+                              </div>
+
+                              <!--gender option-->
+                              <div ><label id = "GenR">Gender :</label>
+                                    <input id="gen" onblur="gendervalidation()()" type="radio" name="Gender" value="Male">Male
+                                    <input id="gen" onblur="gendervalidation()" type="radio" name="Gender" value="Female">Female
+                                    <input id="gen" onblur="gendervalidation()" type="radio"  name="Gender" value="others">others
+                                    <span class= "error" id ="genspan" ></span>
+                              </div>
+
+                              <!--address1 row-->
+                              <div><label class="adds">Address1 :</label>
+                                    <input id="adds1" onblur="address1validate()" type="text" name="CAddress" placeholder="current address">
+                                    
+                              </div>
+
+                              <!--address2 row-->
+                              <div><label class="adds">Address2 :</label>
+                                    <input id="adds2" onblur="address2validate()" type="text" name="PAddress" placeholder="parmanent address">
+                                   
+                              </div>
+
+                              <!--city selection code-->
+                              <div class="city"><label>City :</label>
+                                    <select class="select" id="seccity" onblur="cityvalidate()" name="cities" >
+                                          <option value="Select" >Select</option>
+                                          <option value="Jaipur">Jaipur</option>
+                                          <option value="Udaipur">Udaipur</option>
+                                          <option value="ajmer">Ajmer</option>
+                                          <option value="bikaner">Bikaner</option>
+                                          <option value="mumbai">Mumbai</option>
+                                          <option value="hyderabad">Hyderabad</option>
+                                    </select>
+                                    
+                              </div>
+
+                              <!--select state code-->
+                              <div class="state"><label>State :</label>
+                                    <select class="select" id="secstate" onblur="statevalidate()" name="States">
+                                          <option value="Select">Select</option>
+                                          <option value="Rajasthan">Rajasthan</option>
+                                          <option value="Telagana">Telagana</option>
+                                          <option value="Maharastra">Maharastra</option>
+                                          <option value="Haryana">Haryana</option>
+                                          <option value="Madhya Pardesh">Madhya Pardesh</option>
+                                          <option value="Gujarat">Gujarat</option>
+                                    </select>
+                                  
+                              </div>
+
+                              <!--select country code-->
+                              <div class="country"><label>Country :</label>
+                                    <select class="select" id="seccountry" onblur="countryvalidate()" name="Country">
+                                          <option value="Select">Select</option>
+                                          <option value="India">India</option>
+                                          <option value="Russia">Russia</option>
+                                          <option value="canada">Canada</option>
+                                          <option value="china">China</option>
+                                          <option value="USA">USA</option>
+                                          <option value="UK">UK</option>
+                                    </select>
+                                    
+                              </div>
+
+                              <!--submit and reset button-->
+                              <div class="button">
+                                    <button type="submit" value="submit">submit</button>
+                                    <button type="Reset" value="Reset" onclick="restto()">reset</button>
+                              </div>
+
+                              <!--code end here-->
+                        </div>
+                  </div>
+            </div>
+
+      </form>
+</body>
+
+</html>

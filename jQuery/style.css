@@ -1,0 +1,118 @@
+.wrapper{
+    background:#D3D3D3;
+    width: 700px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    
+}
+
+.container{
+    
+    width: 700px;
+    height: 980px;
+    margin: 0, auto;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.form{
+    background: white;
+    width: 400px;
+    height: 700px;
+    margin: 0 auto; 
+    padding: 25px
+}
+
+#h{
+    
+    color:blue;
+    text-align: center;
+    font-display: solid;
+   }
+
+label{
+    padding-right: 20px;
+}
+
+
+#Fname{
+    margin-left: 20px;
+}
+
+
+#lname{
+    margin-left: 135px;
+}
+
+
+#mail{
+    margin-left: 31px;
+}
+
+
+#eid{
+    margin-left: 15px;
+    text-align: center;
+}
+
+
+
+.city select{
+    margin-left: 65px;
+}
+
+.state select{
+    margin-left: 52px;
+}
+
+
+.country select{
+    margin-left: 30px;
+}
+
+
+.form div{
+    margin-bottom: 15px;
+    
+}
+
+
+.select{
+    width: 57%;    
+}
+
+
+.button{
+    text-align: center;
+    display:block;
+    margin-top: 15px;
+}    
+
+/*date of birth css*/
+
+        #Dob{
+            width : 40%;
+            margin-left: 10%;
+
+        }
+
+/*address css*/
+
+            #adds1{
+                margin-left: 4%;
+            }
+
+            #adds2{
+                margin-left: 4%;
+            }
+
+/*gender radio button css*/
+           #gen{
+                    margin-left: 8%;
+                }
+.error{
+     color: red;
+     font-size: 70%;
+                }
