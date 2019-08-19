@@ -8,7 +8,7 @@ function fieldRequired(id1)
     }
 else
     {         
-       $(id1).next().remove(".error");
+       $(id1).next().remove("error");
        return true;
     }
 }
@@ -29,91 +29,89 @@ function validate()
 //function for  fullname validation
               function fullName()
                    {
-                      var fname= document.getElementById("Fname");
-                       fieldRequired(fname) ;
-                            $(fname).next().remove();
+                     
+                       fieldRequired(Fname) ;
+                            $("#Fname").next().remove();
                             var x = /^[a-zA-Z\s]+$/;
-                             if(fieldRequired(fname) && !x.test(fname.value) )
+                             if(fieldRequired(Fname) && !x.test($("#Fname").val()) )
                                {
-                                $(fname).after("<div class=error > please enter in apbhabets</div>");
+                                $("#Fname").after("<div class=error > please enter in apbhabets</div>");
                                 return false
                                } 
                             else
                                 {
-                                  $(fname).next().remove("error");
+                                  $("#Fname").next().remove("error");
                                   return true;
                                 }                                             
                     }
 //mail validation    
             function emailvalidate()
                    {
-                        var emailId= document.getElementById("mail");                                 
-                    fieldRequired(emailId)
-                    $(emailId).next().remove()
-                    var x = /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@+ [A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/;
-                     if(fieldRequired(emailId) && !x.test(emailId.value)  )
+                                                       
+                       fieldRequired(mail);
+                    $('#mail').next().remove();
+                    var x =/^\w+([\.-]?\w+)*@\w+([\.-]?w+)*(\.\w{2,3})+$/;
+                     if(fieldRequired(mail) &&  !x.test($('#mail').val())  )
                        {
-                        $(emailId).after("<div class=error > please enter valid email address</div>");
-                        return false
+                        $('#mail').after("<div class=error > please enter valid email address</div>");
+                        return false;
+                       
                        } 
                     else
                         {
-                          $(emailId).next().remove("error");
+                        $('#mail').next().remove("error");
                           return true;
-                        }          
+                          
+                        }         
                                       
-                  }
+                   }
            
   //validation on contact no.
     function contactvalidate()
         {
-          var contNumber= document.getElementById("cont");
-          fieldRequired(contNumber); 
-                  $(contNumber).next().remove("error");            
+         
+          fieldRequired(cont); 
+                  $("#cont").next().remove("error");            
                   
-                              if(fieldRequired(contNumber) && isNaN(contNumber.value))
+                              if(fieldRequired(cont) && isNaN($("#cont").val()))
                               {
-                                $(contNumber).after("<div class = error>please enter digits</div>");
+                                $("#cont").after("<div class = error>please enter digits</div>");
                           
                               }
                               else
-                            $(contNumber).next().remove("error");            
+                            $("#cont").next().remove("error");            
         }
 //validation for address1   
 function address1validate()
     {
-       var addss1= document.getElementById("adds1");
-            fieldRequired(addss1)  ;       
+       
+            fieldRequired(adds1)  ;       
      }
 
 //validation for address2
 function address2validate()
     {
-            var addss2= document.getElementById("adds2");
-             fieldRequired(addss2);                              
+            fieldRequired(adds2);                              
     }
 
 //date of birth validation
      function dateofBvalidate()
         {
-                var dateOB= document.getElementById("Dob");
-                fieldRequired(dateOB);
+            fieldRequired(Dob);
                                                     
         }
 //gender validation
       function gendervalidation()
       {
-              genV=document.getElementById("gen");
-              genL=document.getElementById("genspan");
-              
+                            
               if($('input[type=radio][name=Gender]:checked').length == 0)
                       {
                        
-                        $(genL).text("please select your gender");
+                        $("#genspan").text("please select your gender");
                        return false;
                       }
                else
-               $(genL).text("");
+               $("#genspan").text("");
                  return true;
                   
                        
@@ -121,29 +119,29 @@ function address2validate()
 //cityvalidation
    function cityvalidate()
         {
-                    var cityV=document.getElementById("seccity") ;
-                    $(cityV).next().remove(".error");
-                        if(cityV.value == "Select")
+                    
+                    $("#seccity").next().remove(".error");
+                        if($("#seccity").val() == "Select")
                         {
-                          $(cityV).after("<div class=error >please select your city</div>");
+                          $("#seccity").after("<div class=error >please select your city</div>");
                           return false;
                         }        
                     else
-                        $(cityV).next().remove(".error");
+                        $("#seccity").next().remove(".error");
                         return true;
           }
 //validation of state
  function statevalidate()
       {
-                var stateV=document.getElementById("secstate") ;
-                $(stateV).next().remove(".error");
-                      if(stateV.value == "Select")
+               
+                $("#secstate").next().remove(".error");
+                      if($("#secstate").val() == "Select")
                       {
-                            $(stateV).after("<div class=error >please select your city</div>");
+                            $("#secstate").after("<div class=error >please select your city</div>");
                             return false;
                       }        
                       else
-                            $(stateV).next().remove(".error");
+                            $("#secstate").next().remove(".error");
                             return true;
 
     }
@@ -151,14 +149,14 @@ function address2validate()
  function countryvalidate()
         {
                 var countryV=document.getElementById("seccountry") ;
-                $(countryV).next().remove(".error");
-                      if(countryV.value == "Select")
+                $("#seccountry").next().remove(".error");
+                      if($("#seccountry").val() == "Select")
                       {
-                              $(countryV).after("<div class=error >please select your city</div>");
+                              $("#seccountry").after("<div class=error >please select your city</div>");
                               return false;
                       }        
                       else
-                              $(countryV).next().remove(".error");
+                              $("#seccountry").next().remove(".error");
                               return true;
          }
 
